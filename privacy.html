@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Humanomics privacy policy</title>
+<meta name="description" content="What the Humanomics browser extension reads, what it keeps on your device, and what it sends.">
+<link rel="icon" href="assets/icon32.png">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="wrap nav">
+  <a class="brand" href="./"><img src="assets/logo.svg" width="30" height="30" alt="">Humanomics</a>
+  <nav class="nav-links"><a href="./">Home</a><a href="privacy.html" aria-current="page">Privacy</a></nav>
+</header>
+
+<main class="wrap">
+  <article class="doc">
+    <div class="kicker">Privacy policy</div>
+    <h1 class="display">Your notebooks stay yours.</h1>
+    <p class="updated">Last updated: October 17, 2026</p>
+
+    <div class="summary"><p>Humanomics never sends your code. With your consent, it shares only anonymized save times, code sizes and numbered authors, to tune its metrics.</p></div>
+
+    <p>Humanomics is a browser extension that analyzes the revision history of the Google Colab notebook open in your current tab. This page explains what it reads, what it keeps, and what it sends.</p>
+
+    <h2>What Humanomics reads</h2>
+    <p>When you click the Humanomics icon on a Colab notebook, Humanomics asks Google Drive for the notebook's list of saved versions through Colab's own signed-in connection: each save's time, author name and email, and file size. If Drive can't be reached, it can instead read the dates and names shown in Colab's <strong>File → Revision history</strong> list.</p>
+    <p>To measure code size, Humanomics downloads each revision once through the same Colab session and counts the bytes of code and text in its cells. The notebook contents are read in your browser and discarded straight away. Only the byte count is kept.</p>
+
+    <h2>What stays on your device</h2>
+    <p>The following are stored in your browser's local extension storage and never leave your device:</p>
+    <ul>
+      <li>the revision list (save times, author names and emails, file sizes)</li>
+      <li>the code size of each revision</li>
+      <li>whether you agreed to the anonymized statistics</li>
+    </ul>
+    <p>You can remove them at any time by removing the extension.</p>
+
+    <h2>What is sent, with your consent</h2>
+    <p>To tune its metrics, Humanomics sends anonymized statistics for each notebook it analyzes. The first time you open it, Humanomics shows what is shared and asks you to agree. It asks only once. If you don't agree, it closes without reading anything, and nothing is sent. If you no longer agree, remove the extension.</p>
+    <p>For each checkpoint it sends:</p>
+    <ol>
+      <li>the seconds since the notebook's first checkpoint (no real dates)</li>
+      <li>the code size in bytes</li>
+      <li>the author as a number (1, 2, 3…), never a name or email</li>
+    </ol>
+    <p>It also sends the extension version, whether the data came from Colab's revision data or the on-screen list, and a one-way hash of the notebook's file ID so the same notebook isn't counted twice. The hash can't be turned back into the file ID.</p>
+    <p>It never sends notebook names, author names, emails, Drive file IDs, revision IDs, real dates, scores, or any code or other notebook contents.</p>
+    <p>The statistics are stored in a Supabase database run by the developer and are used only to calibrate Humanomics. They are not sold, shared with third parties, or used for advertising.</p>
+
+    <h2>What Humanomics doesn't do</h2>
+    <ul>
+      <li>No account, sign-in or API key.</li>
+      <li>No tracking or advertising, and no analytics beyond the statistics above.</li>
+      <li>It runs only on Google Colab pages.</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Questions or requests: open an issue at <a href="https://github.com/AhmadM-DL/humanomics-site/issues">github.com/AhmadM-DL/humanomics-site/issues</a>.</p>
+  </article>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Built by <a href="https://www.linkedin.com/in/ahmad-mustapha-ml" target="_blank" rel="noopener noreferrer">Ahmad Mustapha</a>. Not affiliated with Google.</span>
+    <nav><a href="./">Home</a></nav>
+  </div>
+</footer>
+
+</body>
+</html>

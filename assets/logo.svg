@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Humanomics">
+  <title>Humanomics</title>
+  <g fill="none" stroke-width="14">
+    <!-- middle link: amber half on the left, orange half on the right -->
+    <path d="M64 50 H44 A14 14 0 0 0 44 78 H64" stroke="#F9AB00"/>
+    <path d="M64 50 H84 A14 14 0 0 1 84 78 H64" stroke="#E8710A"/>
+    <!-- uprights: two tall rings -->
+    <rect x="11" y="9" width="36" height="110" rx="18" stroke="#E8710A"/>
+    <rect x="81" y="9" width="36" height="110" rx="18" stroke="#F9AB00"/>
+    <!-- weave: the link passes over the left ring on top, over the right ring at the bottom -->
+    <path d="M37 50 H57" stroke="#F9AB00"/>
+    <path d="M71 78 H91" stroke="#E8710A"/>
+  </g>
+</svg>
